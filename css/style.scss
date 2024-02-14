@@ -1,0 +1,492 @@
+/* reset */
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+@import "_variables";
+@import "_expand";
+@import "_mixin";
+
+@import "_reset";
+
+
+body {
+    height: 100%;
+    width: 100vw;
+    font-family: "Pretendard Variable", sans-serif;
+    font-weight: $font-weight-medium;
+    font-size: 1em;
+    overflow: hidden;
+    @media only screen and (max-width: 330px) {
+        font-size: 0.8em;
+    }
+}
+
+header {
+    @extend %position-fixed;
+    padding: 20px 20px 40px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, rgba(79,208,107,1) 0%, rgba(48,193,167,1) 100%);
+    z-index: 1000;
+    &.sub {
+        background: #fff;
+        .icons {
+            .search.active a{
+                background-image: url(../images/back_green.svg);
+            }
+        }
+        .title {
+            @include main-title('Pretendard Variable', $primary-color);
+        }
+    }
+    .icons {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                overflow: hidden;
+                text-indent: -1000px;
+                background-size: cover;
+                }
+                &.search {
+                    a{
+                        background: url(../images/search.svg) no-repeat center;
+                    }
+                    &.active {
+                        a{
+                            background-image: url(../images/back.svg);
+                        }
+                    }
+                }
+                &.nofiticattion a{
+                    background: url(../images/notice.svg) no-repeat center;
+                    position: relative;
+                    .new {
+                        position: absolute;
+                        right: 3px;
+                        top: 3px;
+                        width: 5px;
+                        height: 5px;
+                        border: solid 2px #fff;
+                        background-color: $text-color-red;
+                        border-radius: 100%;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .title {
+        @include main-title('Cafe24Ssurround', #fff);
+    }
+
+}
+
+#main > div > .top {
+    @include top(25px);
+    padding: 0 20px;
+    h2 {
+        font-size: 1.25em;
+        letter-spacing: $letter-spacing;
+        font-weight: 500;
+        strong {
+            font-size: 1.375em;
+            font-weight: 700;
+            span {
+                color: $primary-color;
+            }
+        }
+    }
+    .more {
+        @include more-botton;
+    }
+}
+
+.contents {
+    overflow: hidden;
+    p.title {
+        @include contents-title(90%);
+        @extend %text-overflow;
+    }
+}
+
+#main {
+    @include contents-area(0);
+    > div {
+        margin-top: $section-margin;
+    }
+
+    #recommend {
+        margin-top: 0;
+        .contents{
+            width: 100%;
+            padding-left: 20px;
+            box-sizing: border-box;
+            .swiper_container {
+                @extend %swiper_container;
+                .swiper-slide {
+                    @extend %swiper-slide;
+                    flex-direction: column;
+
+                    .thumb {
+                        border-radius: 70px;
+                        img {
+                            @extend %slide-img;
+                            border-radius: 70px;
+                            }
+                    }
+                    .title {
+                        margin-top: 10px;
+                        .top {
+                            p{
+                                @include contents-title(90%);
+                                @extend %text-overflow;
+                            }
+                        }
+                        .bottom {
+                            @include contents-title(90%);
+                            margin-top: 10px;
+                            display: flex;
+                            justify-content: space-between;
+                            color: $text-color-gray;
+                            .rate {
+                                &[data-difficult="easy"]{
+                                    @extend %icon-star;
+                                    background-image: url(../images/star_yellow.png);
+                                    
+                                }
+                                &[data-difficult="normal"]{
+                                    @extend %icon-star;
+                                    background-image: url(../images/star_green.png);
+                                }
+                                &[data-difficult="hard"]{
+                                    @extend %icon-star;
+                                    background-image: url(../images/star_red.png);
+                                }
+                            }
+                            .time {
+                                padding-left: 20px;
+                                background: url(../images/icon_time.png) no-repeat left 0 center;
+                            }
+                        }
+                    }
+                }
+                }
+            
+        }
+    }
+    #banner {
+        .swiper_container {
+            padding-bottom: 20px;
+            @extend %swiper_container;
+            .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+                bottom: 0px
+            }
+            .swiper-pagination-bullet-active {
+                background-color: $primary-color;
+            }
+            .swiper-slide {
+                @extend %swiper-slide;
+                img {
+                    @extend %slide-img;
+                    }
+                }
+        }
+    }
+    
+    #deals {
+        .contents {
+            padding-left: 20px;
+            .swiper_container {
+                @extend %swiper_container;
+                .swiper-slide {
+                    @extend %swiper-slide;
+                    .thumb {
+                        border: solid 1px #dfdfdf;
+                        @include content-thumb;
+                    }
+                    .price_area {
+                        @include width-align(90%);
+                        @include price(0.875em, 17px);
+                        font-weight: 700;
+                        .sale {
+                            color: $text-color-red;
+                        }
+                    }
+                    .price_origin {
+                        @include width-align(90%);
+                        @include price(0.75em, 15px);
+                        color: $text-color-gray;
+                        text-decoration: line-through;
+                    }
+                    }
+            }
+        }
+    }
+    
+    #best {
+        .contents {
+            padding-left: 20px;
+        .swiper_container {
+            @extend %swiper_container;
+            .swiper-slide {
+                @extend %swiper-slide;
+                .thumb {
+                    border: solid 1px #dfdfdf;
+                    @include content-thumb;
+                }
+                }
+            }
+        }
+    }
+
+    #magazine {
+        .contents {
+            padding-left: 20px;
+        .swiper_container {
+            @extend %swiper_container;
+            .swiper-slide {
+                @extend %swiper-slide;
+                .thumb {
+                    border: solid 1px #dfdfdf;
+                    @include content-thumb;
+                }
+                }
+            }
+        }
+    }
+}
+
+#search{
+    @include contents-area;
+    display: none;
+    position: relative;
+    &.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    > div > .top {
+        @include top(15px);
+        h3 {
+            font-size: 1em;
+            letter-spacing: $letter-spacing;
+            line-height: 21px;
+            font-weight: 700;
+            strong {
+                color: $primary-color;
+            }
+        }
+        .delete a {
+            font-size: 0.875em;
+            line-height: 21px;
+            color: $text-color-gray;
+        }
+        .more {
+            @include more-botton;
+        }
+        
+    }
+    .form_area {
+        width: 100%;
+        form {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            input[type="submit"]{
+                @include icon-button(1.625em, url(../images/search_green.svg));
+            }
+            input[type="text"]{
+                width: 100%;
+            }
+            input::placeholder {
+                color: #888;
+                font-size: 14px;
+                letter-spacing: $letter-spacing;
+                @media only screen and (max-width: 330px) {
+                    font-size: 12px;   
+                }
+            }
+            .bar {
+                display: flex;
+                padding: 7px 14px;
+                width: 100%;
+                gap: 5px;
+                border: 2.5px solid $primary-color;
+                border-radius: 20px;
+            }
+            .voice {
+                margin: auto 0;
+                input[type="button"]{
+                    @include icon-button(1.875em, url(../images/voice.svg));
+                }
+            }
+        }
+    }
+    .recent_search{
+        .bottom {
+            .contents {
+                ul {
+                    @include flex-wrap(10px, 10px);
+                    li {
+                        @include keyword-button;
+                    }
+                }
+            }
+        }
+    }
+    .rank{
+        ol {
+            @include flex-wrap(15px, 10px);
+            li{
+                counter-increment: li;
+                line-height: 21px;
+                width: calc((100% - 15px)/2);
+    
+                &::before {
+                    display: inline-block;
+                    content: counter(li);
+                    color: $primary-color;
+                    font-size: 1.125em;
+                    font-weight: 700;
+                    text-align: center;
+                    width: 24px;
+                    padding-right: 11px;
+                }
+            }
+        }
+    }
+    .view {
+            .contents {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    li {
+                        flex-basis: 30%;
+                        a {
+                            .thumb {
+                                @include content-thumb;
+                            }
+                        }
+                    }
+                } 
+        }
+    } 
+}
+
+#view {
+    @include contents-area;
+    display: none;
+    &.active {
+        display: block;
+    }
+    .contents {
+        ul {
+            @include flex-wrap(25px, 60px); 
+            li {
+                width: calc((100% - 25px)/2);
+                .thumb {
+                    border-radius: 70px;
+                    margin-bottom: 10px;
+                    img {
+                        border-radius: 70px
+                    }
+                }
+                .title {
+                    @include contents-title(80%);
+                }
+            }
+        }
+    }   
+}  
+
+#menu {
+    @extend %position-fixed;
+    bottom: 0;
+    padding: 10px 0 34px 0;
+    border-top: solid 2px #F5F5F5;
+    box-sizing: border-box;
+    z-index: 10000;
+    background-color: #fff;
+    .icons {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                width: calc(100% / 5);
+                text-align: center;
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .icon {
+                        width: 31px;
+                        height: 31px;
+                        text-indent: -1000px;
+                        overflow: hidden;
+                        box-sizing: border-box;
+                        &.home {
+                            background: url(../images/home.svg) no-repeat center;
+                        }
+                        &.recipe {
+                            background: url(../images/recipe.svg) no-repeat center;
+                        }
+                        &.store {
+                            background: url(../images/store.svg) no-repeat center;
+                        }
+                        &.community {
+                            background: url(../images/community.svg) no-repeat center;
+                        }
+                        &.my_page {
+                            background: url(../images/mypage.svg) no-repeat center;
+                        }
+                    }
+                    .title {
+                        line-height: 21px;
+                        letter-spacing: $letter-spacing;
+                        color: $text-color-black;
+                    }
+                }
+                &.active {
+                    .icon {
+                        &.home {
+                            background: url(../images/home_active.svg) no-repeat center;
+                        }
+                        &.recipe {
+                            background: url(../images/recipe_active.svg) no-repeat center;
+                        }
+                        &.store {
+                            background: url(../images/store_active.svg) no-repeat center;
+                        }
+                        &.community {
+                            background: url(../images/community_active.svg) no-repeat center;
+                        }
+                        &.my_page {
+                            background: url(../images/mypage_active.svg) no-repeat center;
+                        }
+                    }
+                    .title {
+                    color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

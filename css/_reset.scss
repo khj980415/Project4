@@ -1,0 +1,27 @@
+body, h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, p, table {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+    border: none;
+}
+
+form * {
+    appearance: none;
+    border: none;
+    background: none;
+    font-family: "Pretendard Variable", sans-serif;
+}

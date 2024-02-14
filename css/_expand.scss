@@ -1,0 +1,55 @@
+
+%swiper_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+%swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%slide-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+%position-fixed{
+        position: fixed;
+        left: 0;
+        width: 100%;
+    }
+
+%contents-area{
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 65px;
+    z-index: 1001;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: $header-radius;
+    box-sizing: border-box;
+}
+
+%text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
+
+%icon-star {
+    padding-left: 15px;
+    background: no-repeat left 0 center;
+}
+
+

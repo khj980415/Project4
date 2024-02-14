@@ -1,0 +1,101 @@
+@mixin main-title ($font-family, $color) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: $font-family;
+        color: $color;
+        font-size: 1.625em;
+}
+
+@mixin contents-area ($padding:20px){
+    @extend %contents-area;
+    padding: 30px $padding 130px $padding;
+    &::after {
+        content: "";
+        @extend %position-fixed;
+        top: 65px;
+        height: 30px;
+        border-radius: $header-radius;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        z-index: 1000;
+    }
+}
+
+@mixin content-thumb {
+    border: solid 1px #dfdfdf;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    img {
+        @extend %slide-img;
+        border-radius: 20px
+        }
+}
+
+@mixin price ($size, $line-height){
+    text-align: left;
+    font-size: $size;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin contents-title ($width){
+    margin: 0 auto;
+    width: $width;
+    font-size: 1em;
+    line-height: 18px;
+    letter-spacing: $letter-spacing;
+    font-weight: 500;
+}
+
+@mixin width-align ($width){
+    margin: 0 auto;
+    width: $width;
+}
+
+@mixin icon-button ($size, $url) {
+    width: $size;
+    height: $size;
+    overflow: hidden;
+    text-indent: -1000px;
+    background: $url no-repeat center center;
+    background-size: cover;
+}
+
+@mixin top($content-margin) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $content-margin;
+}
+
+@mixin more-botton {
+    a {
+        display: inline-block;
+        font-size: 0.875em;
+        padding-right: 10px;
+        margin-bottom: 3px;
+        color: $text-color-gray;
+        background: url(../images/more_arrow.png) no-repeat right 0px center;
+    }
+}
+
+@mixin flex-wrap($gapX, $gapY){
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gapY $gapX;
+}
+
+@mixin keyword-button {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    padding: 4px 15px;
+    box-sizing: border-box;
+    background-color: #E9E9E9;
+    border-radius: 20px;
+    font-size: 0.875em;
+    letter-spacing: $letter-spacing;
+    a img {
+            vertical-align: middle;
+        }
+}

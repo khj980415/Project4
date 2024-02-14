@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/icon_192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon_180.png">
+    <link rel="manifest" href="manifest.json">
+    <title>만개의레시피</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header id="header">
+        <h1 class="title">만개의레시피</h1>
+        <div class="icons">
+            <ul>
+                <li class="search"><a href="">search</a></li>
+                <li class="nofiticattion">
+                    <a href="">
+                        nofiticattion
+                        <div class="new"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="main">
+        <div id="recommend">
+            <div class="top">
+                <h2>당신을 위한<br><strong>오늘의 <span>추천</span> 레시피</strong></h2>
+                <div class="more"><a href="">더보기</a></div>
+            </div>
+            <div class="contents">
+                <div class="swiper_container recommendSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                        <div class="thumb"><img src="images/Recommend1.png" alt="recommend1"></div>
+                        <div class="title">
+                            <div class="top">
+                                <p>자취생 간단요리 모짜렐라 치즈밥</p>
+                            </div>
+                            <div class="bottom">
+                                <span class="rate" data-difficult="easy">쉬움</span>
+                                <span class="time">30분</span>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-slide">
+                        <div class="thumb"><img src="images/Recommend2.png" alt="recommend2"></div>
+                        <div class="title">
+                            <div class="top">
+                                <p>휴양지 느낌 낭낭한~ 치킨 라이스</p>
+                            </div>
+                            <div class="bottom">
+                                <span class="rate" data-difficult="normal">보통</span>
+                                <span class="time">50분</span>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-slide">
+                        <div class="thumb"><img src="images/Recommend3.png" alt="recommend3"></div>
+                        <div class="title">
+                            <div class="top">
+                                <p>주말 저녁 쉽고 맛있는 알리오올리오 드셔보세요</p>
+                            </div>
+                            <div class="bottom">
+                                <span class="rate" data-difficult="easy">쉬움</span>
+                                <span class="time">30분</span>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-slide">
+                        <div class="thumb"><img src="images/Recommend4.png" alt="recommend4"></div>
+                        <div class="title">
+                            <div class="top">
+                                <p>백파더 백종원 에그치즈토스트 ~ 간단한데 맛은 최고!</p>
+                            </div>
+                            <div class="bottom">
+                                <span class="rate" data-difficult="easy">쉬움</span>
+                                <span class="time">15분</span>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-slide">
+                        <div class="thumb"><img src="images/Recommend5.png" alt="recommend5"></div>
+                        <div class="title">
+                            <div class="top">
+                                <p>탱글탱글 푸딩처럼 부드러운 급식계란찜 만들기, 중탕달걀찜</p>
+                            </div>
+                            <div class="bottom">
+                                <span class="rate" data-difficult="normal">보통</span>
+                                <span class="time">30분</span>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="swiper-slide">
+                        <div class="thumb"><img src="images/Recommend6.png" alt="recommend6"></div>
+                        <div class="title">
+                            <div class="top">
+                                <p>양배추 참치덮밥 /Cabbage tuna bowl of rice</p>
+                            </div>
+                            <div class="bottom">
+                                <span class="rate" data-difficult="easy">쉬움</span>
+                                <span class="time">20분</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="banner">
+                <div class="contents">
+                    <div class="swiper_container bannerSwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/banner1.png" alt="banner1"></div>
+                        <div class="swiper-slide"><img src="images/banner2.png" alt="banner2"></div>
+                        <div class="swiper-slide"><img src="images/banner3.png" alt="banner3"></div>
+                        <div class="swiper-slide"><img src="images/banner4.png" alt="banner4"></div>
+                        <div class="swiper-slide"><img src="images/banner5.png" alt="banner5"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+            </div>
+        </div>
+        <div id="deals">
+            <div class="top">
+                <h2><strong>핫딜</strong></h2>
+                <div class="more"><a href="">더보기</a></div>
+            </div>
+            <div class="contents">
+                <div class="swiper_container dealsSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/product1.png" alt="product1"></div>
+                                <p class="title">[공동구매] 알텐바흐 큐라이네 디펜더스 후라이팬</p>
+                                <div class="price_area">
+                                    <span class="sale">46%</span>
+                                    <span class="price">53,000원</span>
+                                </div>
+                                <p class="price_origin">99,000원</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/product2.png" alt="product2"></div>
+                                <p class="title">디베아 ALLNEW29000 차이슨 무선청소기 최대 진공도 45000PA</p>
+                                <div class="price_area">
+                                    <span class="sale">37%</span>
+                                    <span class="price">239,000원</span>
+                                </div>
+                                <p class="price_origin">379,000원</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/product3.png" alt="product3"></div>
+                                <p class="title">[1+1특가] 호주 판매 1위! 프리미엄 통곡물 씨드 크래커 크리스프빅 6종 1+1</p>
+                                <div class="price_area">
+                                    <span class="sale">52%</span>
+                                    <span class="price">10,900원</span>
+                                </div>
+                                <p class="price_origin">22,900원</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/product4.png" alt="product4"></div>
+                                <p class="title">여름철 모기벌레기피 필수 아이템 포켓몬 뽀로로 핑크퐁 썸머 모기팔찌 키퍼링</p>
+                                <div class="price_area">
+                                    <span class="sale">20%</span>
+                                    <span class="price">7,900원</span>
+                                </div>
+                                <p class="price_origin">9,900원</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/product5.png" alt="product5"></div>
+                                <p class="title">헹켈 스페셜 파스타 냄비세트 HK40990-005</p>
+                                <div class="price_area">
+                                    <span class="sale">49%</span>
+                                    <span class="price">82,400원</span>
+                                </div>
+                                <p class="price_origin">160,000원</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/product6.png" alt="product6"></div>
+                                <p class="title">레오폴디 칼린타 에어프라이기 3L (2color)</p>
+                                <div class="price_area">
+                                    <span class="sale">82%</span>
+                                    <span class="price">43,900원</span>
+                                </div>
+                                <p class="price_origin">250,000원</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="best">
+            <div class="top">
+                <h2>지금 가장 인기있는<br><strong><span>BEST</span>레시피</strong></h2>
+                <div class="more"><a href="">더보기</a></div>
+            </div>
+            <div class="contents">
+                <div class="swiper_container bestSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/best1.png" alt="best1"></div>
+                                <p class="title">건강한 브런치! 
+                                    오트밀 팬케이크</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/best2.png" alt="best2"></div>
+                                <p class="title">[수제 햄버거] 베이컨 치즈 햄버거</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/best3.png" alt="best3"></div>
+                                <p class="title">여름철 산뜻하게 카프레제 샐러드</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/best4.png" alt="best4"></div>
+                                <p class="title">고소하고 상큼한 일본식 오이토마토무침</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/best5.png" alt="best5"></div>
+                                <p class="title">간단한 술안주로 최고인 버터갈릭새우 만들기</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/best6.png" alt="best6"></div>
+                                <p class="title">크림파스타 만들기 크림스파게티 만드는 법 생각보다 간단해요</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="magazine">
+            <div class="top">
+                <h2>당신을 도와줄<br><strong><span>매거진</span>Tip!</strong></h2>
+                <div class="more"><a href="">더보기</a></div>
+            </div>
+            <div class="contents">
+                <div class="swiper_container magazineSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/magazine1.png" alt="magazine1"></div>
+                                <p class="title">야채 손질하는 법, 얼마나 알고 있나요?</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/magazine2.png" alt="magazine2"></div>
+                                <p class="title">다양한 파스타 면, 이럴 때 써요.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/magazine3.png" alt="magazine3"></div>
+                                <p class="title">과일, 어떻게 세척해야 좋을까요?</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/magazine4.png" alt="magazine4"></div>
+                                <p class="title">손만두 예쁘게 빚는방법 4가지... 그리고 보관법까지!</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/magazine5.png" alt="magazine5"></div>
+                                <p class="title">젤라틴 없는 요플레로 그릭요거트 만드는 꿀팁!</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="thumb"><img src="images/magazine6.png" alt="magazine6"></div>
+                                <p class="title">맛술과 미림의 차이점에서 사용법까지</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="search">
+        <div class="form_area">
+            <form action="">
+                <div class="bar">
+                    <input type="submit" value="search">
+                    <input type="text" placeholder="재료, 레시피를 검색해보세요.">
+                </div>
+                <div class="voice">
+                    <input type="button" value="voice">
+                </div>
+            </form>
+        </div>
+        <div class="recent_search">
+            
+            <div class="top">
+                <h3 class="title"><strong>최근</strong> 검색어</h3>
+                <div class="delete"><a href="">전체 삭제</a></div>
+            </div>
+            <div class="bottom">
+                <div class="contents">
+                    <ul>
+                        <li>
+                            <a href="" class="keyword">된장찌개</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">두부</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">고등어</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">나물</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">오이무침</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">감자조림</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">오징어볶음</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">순두부찌개</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                        <li>
+                            <a href="" class="keyword">된장찌개</a>
+                            <a href="" class="icon"><img src="images/delete.png" alt="delete"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="rank">
+            <div class="top">
+                <h3 class="title"><strong>인기</strong> 검색어</h3>
+            </div>
+            <div class="bottom">
+                <div class="contents">
+                    <ol>
+                        <li><a href="">삼계탕</a></li>
+                        <li><a href="">오이무침</a></li>
+                        <li><a href="">감자조림</a></li>
+                        <li><a href="">오이냉국</a></li>
+                        <li><a href="">감자전</a></li>
+                        <li><a href="">닭볶음탕</a></li>
+                        <li><a href="">김치전</a></li>
+                        <li><a href="">감자</a></li>
+                        <li><a href="">가지볶음</a></li>
+                        <li><a href="">두부조림</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="view">
+            <div class="top">
+                <h3 class="title">최근에 본 <strong>레시피</strong></h3>
+                <div class="more"><a href="">더보기</a></div>
+            </div>
+            <div class="contents">
+                <ul>
+                    <li>
+                        <a href="">
+                            <div class="thumb"><img src="images/recent1.png" alt="recent1"></div>
+                            <p class="title">여름철 별미! 아삭한 오이김밥</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="thumb"><img src="images/recent2.png" alt="recent2"></div>
+                            <p class="title">초간단 나물 3종세트</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="thumb"><img src="images/recent3.png" alt="recent3"></div>
+                            <p class="title">광장시장 부럽지않은 빈대떡 레시피</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="view">
+        <div class="contents">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="thumb"><img src="images/view1.png" alt="view1"></div>
+                        <p class="title">여름철 별미! 아삭한 오이김밥</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="thumb"><img src="images/view2.png" alt="view2"></div>
+                        <p class="title">초간단 나물 3종세트</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="thumb"><img src="images/view3.png" alt="view3"></div>
+                        <p class="title">광장시장 부럽지않은 빈대떡 레시피</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="thumb"><img src="images/view4.png" alt="view4"></div>
+                        <p class="title">주말 저녁 쉽고 맛있는 알리오올리오 드셔보세요</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="thumb"><img src="images/view5.png" alt="view5"></div>
+                        <p class="title">건강한 브런치! 오트밀 팬케이크</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="thumb"><img src="images/view6.png" alt="view6"></div>
+                        <p class="title">[수제 햄버거] 베이컨 치즈 햄버거</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="menu">
+        <div class="icons">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="icon home">home</div>
+                        <div class="title">홈</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon recipe">recipe</div>
+                        <div class="title">레시피</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon store">store</div>
+                        <div class="title">스토어</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon community">community</div>
+                        <div class="title">커뮤니티</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="icon my_page">my page</div>
+                        <div class="title">MY</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "10000recipe",
+  "version": "1.0.0",
+  "description": "10000 Recipe PWA",
+  "main": "main.js",
+  "repository": "https://github.com/khj980415/Project4.git",
+  "author": "khj980415 <khj980415@naver.com>",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
